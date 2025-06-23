@@ -59,25 +59,25 @@ The game controller uses a **4-state FSM** to manage game progression:
 
 ## 🧩 Module Breakdown
 
-### 1. `tic_tac_toe_game.v` (Top Module)
+### 1. tic_tac_toe_game.v (Top Module)
 Integrates all submodules and manages the game.
 
-### 2. `fsm_controller.v`
+### 2. fsm_controller.v
 Implements the 4-state FSM and controls turn logic.
 
-### 3. `position_registers.v`
+### 3. position_registers.v
 Stores board state (`pos1` to `pos9`) as 2-bit values.
 
-### 4. `illegal_move_detector.v`
+### 4. illegal_move_detector.v
 Prevents overwriting already filled positions.
 
-### 5. `nospace_detector.v`
+### 5. nospace_detector.v
 Detects draw condition when no cells are empty.
 
-### 6. `winner_detector.v` & `winner_detect_3.v`
+### 6. winner_detector.v & winner_detect_3.v
 Checks for win patterns and identifies the winner.
 
-### 7. `position_decoder.v`
+### 7. position_decoder.v
 Decodes position (0–8) into a 16-bit one-hot enable signal.
 
 ---
